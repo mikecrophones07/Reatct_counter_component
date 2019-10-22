@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import CounterWithReduce from './component/Counter/CounterWithReducerState'
 import './App.css';
 
 class App extends React.Component {
@@ -11,22 +11,10 @@ class App extends React.Component {
   }
   
   render(){
-    const plusBtn = () => {
-      this.setState({number: this.state.number + 1});
-    }
-    const minusBtn = () => {
-      this.setState({number: this.state.number - 1});
-    }
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <button onClick={plusBtn}> + </button>
-          <p>{this.state.number}</p>
-          <button onClick={minusBtn}> - </button>
+         <CounterWithReduce/>
         </header>
       </div>
     );
